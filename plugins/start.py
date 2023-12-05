@@ -55,11 +55,11 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ʏᴏᴜɴɢ ᴍᴀꜱᴛᴇʀ 💦...")
+        temp_msg = await message.reply("ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ʏᴏᴜɴɢ ᴍᴀꜱᴛᴇʀ/ᴏʟᴅɪᴇ ꜱʟᴀᴠᴇ 🗣️...")
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ʙᴇᴄᴀᴜꜱᴇ ʏᴏᴜ ᴀʀᴇ ᴀʟᴡᴀʏꜱ ꜱᴘʏɪɴɢ..!")
+            await message.reply_text("ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ʙᴇᴄᴀᴜꜱᴇ ʏᴏᴜ ᴡᴇʀᴇ ᴀʟᴡᴀʏꜱ ꜱᴘʏɪɴɢ..!")
             return
         await temp_msg.delete()
 
@@ -88,8 +88,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😷 ᴍʏ ᴀʜʜ..", callback_data = "about"),
-                    InlineKeyboardButton("🌚 ᴇxɪᴛ!", callback_data = "close")
+                    InlineKeyboardButton("😷 ᴀʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton("🫥 ᴇxɪᴛ!", callback_data = "close")
                 ]
             ]
         )
@@ -110,7 +110,7 @@ async def start_command(client: Client, message: Message):
     
 #=====================================================================================##
 
-WAIT_MSG = """"<b>ᴘʀᴏᴄᴇꜱꜱɪɴɢ ᴍʏ ʟᴏᴠᴇ 💓...</b>"""
+WAIT_MSG = """"<b>ᴡᴀɪᴛᴏ~!!😵 ᴘʀᴏᴄᴇꜱꜱɪɴɢ...</b>"""
 
 REPLY_ERROR = """<code>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴀꜱ ᴀ ʀᴇᴘʟᴀʏ ᴛᴏ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴏᴜᴛ ᴀɴʏ ꜱᴘᴀᴄᴇꜱ.</code>"""
 
@@ -191,11 +191,11 @@ async def send_text(client: Bot, message: Message):
         
         status = f"""<b><u>ʙʀᴏᴀᴅᴄᴀꜱᴛ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴍʏ ʟᴏʀᴅ!! 👾</u>
 
-Total Users: <code>{total}</code>
-Successful: <code>{successful}</code>
-Blocked Users: <code>{blocked}</code>
-Deleted Accounts: <code>{deleted}</code>
-Unsuccessful: <code>{unsuccessful}</code></b>"""
+ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code>{total}</code>
+ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟ: <code>{successful}</code>
+ʙʟᴏᴄᴋᴇᴅ ᴜꜱᴇʀꜱ: <code>{blocked}</code>
+ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛꜱ: <code>{deleted}</code>
+ᴜɴꜱᴜᴄᴄᴇꜱꜱꜰᴜʟ: <code>{unsuccessful}</code></b></b>"""
         
         return await pls_wait.edit(status)
 
